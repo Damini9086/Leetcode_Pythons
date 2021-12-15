@@ -1,0 +1,16 @@
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        n = abs(x)
+        rno = 0
+        while n>0:
+            rem = n%10
+            n = n//10
+            rno = rno*10+rem
+        if x == rno:
+            return True
+        else:
+            return False
